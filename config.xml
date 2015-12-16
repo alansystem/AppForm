@@ -5,6 +5,8 @@
         versionCode = "10" 
         version     = "1.0.0" >
 
+    <access origin="*" />
+    
     <!-- versionCode is optional and Android only -->
 
     <name>Auto Shopping Imigrantes</name>
