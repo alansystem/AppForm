@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pesquisa | Auto Shopping Imigrantes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="page-header">
+            
+        <div class="row">
+            <div class="col-md-3">
+                <img src="img/logo2.png" alt="Logo" class="img-responsive">    
+            </div>
+
+            <div class="col-md-6">
+                <h1>Pesquisa <small>Auto Shopping Imigrantes</small></h1>
+            </div>
+
+            <div class="col-md-2" style="padding-top:30px;text-align:right">
+                <a href="#" class="btnOnline">Envios Pendentes<span style="color:red;font-size:20px" class="qtdOnline">
+            </span></a>
+            </div>
+        </div>
+            
+        </div>
+
+        <!-- Contact Form - START -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-lg">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="text-center header">Dados</legend>
+
+                                <div class="form-group">
+                                    <span class="col-sm-1 col-md-offset-1 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8 col-sm-11">
+                                        <input id="nome" name="name" type="text" placeholder="Nome" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-sm-1 col-md-offset-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8 col-sm-11">
+                                        <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-1 text-center"><i class="fa fa-map-marker bigicon"></i></span>
+                                    <span class="col-md-4">Em que região mora?</span>
+                                    <div class="col-md-8">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="ABC"> ABC
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="Zona Norte"> Zona Norte
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="Zona Sul"> Zona Sul
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="Zona Leste"> Zona Leste
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="Zona Oeste"> Zona Oeste
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="Centro"> Centro
+                                        </label>
+                                    </div>
+                                    <div class="col-md-offset-2 col-sm-1">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="regiao" class="regiao" value="Outra"> Outra.
+                                        </label>
+                                    </div>
+                                    <div class="col-md-7 col-sm-11">
+                                        <input type="text" name="outraRegiao" placeholder=" Qual?" class="form-control">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-1 text-center"><i class="fa fa-info-circle bigicon"></i></span> Como ficou conhecendo o Shopping?
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-1 col-sm-2 col-xs-4">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu1" value="Globo"> Globo
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu2" value="Jornal"> Jornal
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu3" value="Facebook"> Facebook
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-4">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu4" value="Band"> Band
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu5" value="Revista"> Revista
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu6" value="Google"> Google
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-4">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu7" value="RedeTV"> RedeTV
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu8" value="Panfleto"> Panfleto
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu9" value="Indicação"> Indicação
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-4">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu10" value="Gazeta"> Gazeta
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu11" value="Outdoor"> Outdoor
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu12" value="Passagem"> Passagem
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-3 col-xs-4">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu13" value="TV+ ABC"> TV+ ABC
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu14" value="Carro de som"> Carro de som
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="comoConheceu" id="comoConheceu15" value="Cliente antigo"> Cliente antigo
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="button" class="btn btn-primary btn-lg btnEnviar">Cadastrar</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript">
+    function cadastro(dados)
+        {
+            var numeroCadastro = localStorage.length+1;
+            var ref = 'cadastro'+numeroCadastro;    
+            
+            localStorage.setItem(ref,JSON.stringify(dados));
+        }   
+
+    function replaceAll(string, token, newtoken) {
+        while (string.indexOf(token) != -1) {
+            string = string.replace(token, newtoken);
+        }
+        return string;
+    }
+
+
+    function enviaOnline()
+    {
+        $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?name=ola');   
+
+                var i = 0;
+                while(localStorage.length>=i)
+                {
+                    var linha = 'cadastro'+i++;
+
+                    var parametros = localStorage.getItem(linha);
+
+                    if(parametros != null)
+                    {
+                        var dados = replaceAll(parametros,'"','');    
+                    
+
+                        $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados,function(data){
+                        if(data == 'enviado')
+                         {                                
+                            //Apaga localmente
+                            localStorage.clear();  
+                         }
+                             
+                        });   
+                    }     
+                  
+
+                    //alert(typeof parametros)
+
+                   // alert('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados);
+                    
+                    
+                    //localStorage.removeItem('cadastro'+i++);
+                }
+
+                alert('Dados enviados com sucesso!');
+                location.href="index.html";
+
+            //Envia dados que estão armazenados localmente para banco de dados online.
+            /*
+                alert(localStorage.length);
+                var i = 0;
+                while(i<=localStorage.length)
+                {
+                    var parametros = localStorage.getItem('cadastro'+i++);
+                    alert(parametros);
+                    
+                    //localStorage.removeItem('cadastro'+i++);
+                }
+                */
+
+    }
+
+    $(function(){
+
+            $('#nome').focus();
+
+            //Exibe Quantidade à ser enviada para o Online
+            $('.qtdOnline').html(' - '+localStorage.length);
+                     
+            $('.btnEnviar').click(function(){
+                var dados = $('form').serialize();
+
+                //Cadastra localmente
+                cadastro(dados);
+
+                alert('Cadastro Realizado com Sucesso!');
+                location.href="index.html";
+
+            });
+
+            $('.btnOnline').click(function(){
+                if (confirm('Clique em OK caso esteja conectado à internet')) {
+                    enviaOnline();
+                } else {
+                    return false;
+                }
+
+               
+            });
+
+            //cadastro();
+            //remover();
+            //localStorage.clear();
+
+            //var cadastros = localStorage.getItem();
+
+            //alert(localStorage.length);
+
+            //alert(CryptoJS.MD5("Alan"));
+
+        });
+    </script>
+</body>
+
+</html>
