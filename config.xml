@@ -9,9 +9,6 @@
 
     <name>Auto Shopping Imigrantes</name>
 
-    <icon src="icon.png" />
-    <access origin="http://clarearpropaganda.com.br" subdomains="true" />
-
     <description>
         Aplicativo para pesquisa.
     </description>
