@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Auto Shopping Imigrantes</name>
+
+    <icon src="icon.png" />
+    <access origin="http://clarearpropaganda.com.br" subdomains="true" />
+
+    <description>
+        Aplicativo para pesquisa.
+    </description>
+
+    <author href="https://clarearpropaganda.com.br" email="programador@clarearpropaganda.com.br">
+        Alan Nogueira 
+    </author>
+
+</widget>
