@@ -236,8 +236,10 @@
                     
 
                         $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados,function(data){
+                            alert(data);
                         if(data == 'enviado')
-                         {                                
+                         {              
+
                             //Apaga localmente
                             localStorage.clear();  
                          }
