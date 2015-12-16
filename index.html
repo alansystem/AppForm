@@ -35,7 +35,7 @@
             
         </div>
 
-        <!-- Contact Form - START -->adadad
+        <!-- Contact Form - START -->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -198,9 +198,8 @@
         </div>
     </div>
     
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
     function cadastro(dados)
@@ -221,8 +220,6 @@
 
     function enviaOnline()
     {
-        $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?name=ola');   
-
                 var i = 0;
                 while(localStorage.length>=i)
                 {
@@ -236,14 +233,12 @@
                     
 
                         $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados,function(data){
-                            alert(data);
-                        if(data == 'enviado')
-                         {              
+                            if(data == 'enviado')
+                             {              
 
-                            //Apaga localmente
-                            localStorage.clear();  
-                         }
-                             
+                                //Apaga localmente
+                                localStorage.clear();  
+                             }
                         });   
                     }     
                   
