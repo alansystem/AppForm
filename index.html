@@ -235,7 +235,6 @@
                         $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados,function(data){
                             if(data == 'enviado')
                              {              
-
                                 //Apaga localmente
                                 localStorage.clear();  
                              }
@@ -248,7 +247,7 @@
                    // alert('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados);
                     
                     
-                    //localStorage.removeItem('cadastro'+i++);
+                    localStorage.removeItem('cadastro'+i++);
                 }
 
                 alert('Dados enviados com sucesso!');
@@ -270,7 +269,6 @@
     }
 
     $(function(){
-            $.support.cors = true;
 
             $('#nome').focus();
 
@@ -289,13 +287,11 @@
             });
 
             $('.btnOnline').click(function(){
-                enviaOnline();
-               /* if (confirm('Clique em OK caso esteja conectado à internet')) {
+                if (confirm('Clique em OK caso esteja conectado à internet')) {
                     enviaOnline();
                 } else {
                     return false;
                 }
-                */
 
                
             });
