@@ -28,7 +28,8 @@
             </div>
 
             <div class="col-md-2" style="padding-top:30px;text-align:right">
-                <a href="#" class="btnOnline">Envios Pendentes<span style="color:red;font-size:20px" class="qtdOnline">
+                <a href="#" class="btnOnline">Envios Pendentes<br />
+                <span style="color:red;font-size:20px" class="qtdOnline">
             </span></a>
             </div>
         </div>
@@ -217,63 +218,67 @@
         return string;
     }
 
+function checkOnline(url, error, ok) {
+    try {
+        var scriptElem = document.createElement('script');
+        scriptElem.type = 'text/javascript';
+        scriptElem.onerror = function(){error();};
+        scriptElem.onload = function(){ok();};
+        scriptElem.src = url;
+        document.getElementsByTagName("body")[0].appendChild(scriptElem);
+    } catch(err) {
+        error(err);
+    }
+};
 
     function enviaOnline()
     {
+
                 var i = 0;
-                while(localStorage.length>=i)
+                while(localStorage.length)
                 {
+                    var contador = i;
                     var linha = 'cadastro'+i++;
 
                     var parametros = localStorage.getItem(linha);
 
+
                     if(parametros != null)
                     {
-                        var dados = replaceAll(parametros,'"','');    
-                    
+                        var dados = replaceAll(parametros,'"','');  
 
-                        $.post('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados,function(data){
-                            if(data == 'enviado')
-                             {              
-                                //Apaga localmente
-                                localStorage.clear();  
-                             }
-                        });   
+                       $.ajax({
+                            url: 'http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados,
+                            cache: false,
+                            async:false,
+                            method: "POST",
+                            statusCode: {
+                                200: function() {
+                                    //Apaga localmente
+                                    localStorage.removeItem('cadastro'+contador);
+                                    $('.qtdOnline').html(localStorage.length);
+
+                                    }
+                            }
+                        });
+
                     }     
-                  
-
-                    //alert(typeof parametros)
-
-                   // alert('http://www.clarearpropaganda.com.br/sites/FormPesquisaASI/sistema/pesquisa/enviar?'+dados);
-                    
-                    
-                    //localStorage.removeItem('cadastro'+i++);
                 }
 
                 alert('Dados enviados com sucesso!');
-                location.href="index.html";
 
-            //Envia dados que estão armazenados localmente para banco de dados online.
-            /*
-                alert(localStorage.length);
-                var i = 0;
-                while(i<=localStorage.length)
-                {
-                    var parametros = localStorage.getItem('cadastro'+i++);
-                    alert(parametros);
-                    
-                    //localStorage.removeItem('cadastro'+i++);
-                }
-                */
+                location.href="index.html";
 
     }
 
     $(function(){
 
+        var qtdOnline = localStorage.length;
+
             $('#nome').focus();
 
             //Exibe Quantidade à ser enviada para o Online
-            $('.qtdOnline').html(' - '+localStorage.length);
+            $('.qtdOnline').html(qtdOnline);
                      
             $('.btnEnviar').click(function(){
                 var dados = $('form').serialize();
@@ -287,8 +292,21 @@
             });
 
             $('.btnOnline').click(function(){
+
+                $('.btnOnline').html('<img src="img/carregando.gif">');
                 if (confirm('Clique em OK caso esteja conectado à internet')) {
-                    enviaOnline();
+
+                    checkOnline('http://www.google.com.br/', function() {
+
+                        alert('Não foi possível estabelecer a conexão, verifique se está conectado na internet!');
+                        $('.btnOnline').html('Envios Pendentes<br /><span style="color:red;font-size:20px" class="qtdOnline">'+qtdOnline+'</span>');
+                        
+
+                    }, function(){
+                        enviaOnline();
+                    });
+
+                    
                 } else {
                     return false;
                 }
