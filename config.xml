@@ -16,6 +16,9 @@
         Clarear Propaganda
     </author>
 
+
+    <icon src="icon.png" />
+
     <access origin="*"/>
 
 </widget>
